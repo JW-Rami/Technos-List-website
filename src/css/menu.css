@@ -9,3 +9,8 @@ ul {
     flex-direction: row; /*Pour que la direction des éléments se fassent flêche*/
     justify-content: space-between;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}

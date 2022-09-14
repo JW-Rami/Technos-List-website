@@ -15,6 +15,7 @@ export default function Home() {
             <div>
                 Bienvenue sur ce site qui est consacré à ma progression
             </div>
+
         </div>
         
     )

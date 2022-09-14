@@ -12,10 +12,9 @@ function App() {
     <>
     <Menu/>
     <Routes>
-      <Route path="/" element={<Home /> } />         {/* On indique ici que Home est à la racine */}
+      <Route path="/" element={<Home /> } />         {/* On indique ici que Home est à la racine pour qu'il pointe vers le composant Home */}
       <Route path="/add" element={<TechnoAdd />} />
       <Route path="/list" element={<TechnoList/>} />
-    
     </Routes>
     {/* 
     <Home />
