@@ -1,0 +1,11 @@
+.menu
+{
+    font-size: 1.2em;
+}
+
+ul {
+    list-style: none ; /*Pour enlever le style de base d'une liste*/
+    display: flex;
+    flex-direction: row; /*Pour que la direction des éléments se fassent flêche*/
+    justify-content: space-between;
+}
