@@ -13,6 +13,7 @@ function App() {
     <Menu/>
     <Routes>
       <Route path="/" element={<Home /> } />         {/* On indique ici que Home est à la racine pour qu'il pointe vers le composant Home */}
+      <Route path="/home" element={<Home /> } />     {/* Non il n'y a pas doublon. Pour éviter que le / soit considérer comme "active" et le garder constamment en true il faut lui ajouter le second affichage */}
       <Route path="/add" element={<TechnoAdd />} />
       <Route path="/list" element={<TechnoList/>} />
     </Routes>

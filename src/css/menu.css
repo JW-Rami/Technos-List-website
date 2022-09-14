@@ -24,3 +24,8 @@ a {
     color: #07c5fa;
 }
 
+.notActiveLink
+{
+    background-color: red;
+}
+
