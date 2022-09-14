@@ -10,13 +10,14 @@ import TechnoList from './pages/TechnoList';
 function App() {
   return (
     <>
+    <Menu/>
     <Routes>
       <Route path="/" element={<Home /> } />         {/* On indique ici que Home est à la racine */}
       <Route path="/add" element={<TechnoAdd />} />
       <Route path="/list" element={<TechnoList/>} />
     
     </Routes>
-    {/* <Menu />
+    {/* 
     <Home />
     <TechnoAdd/>
     <TechnoList/> */}
