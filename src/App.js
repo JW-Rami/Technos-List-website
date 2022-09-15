@@ -30,6 +30,8 @@ function App() {
     <Home />
     <TechnoAdd/>
     <TechnoList/> */}
+
+    
     </>
   );
 }
