@@ -6,7 +6,7 @@ export default function TechnoList(props) {
 <div>
     {
         technos.map(techno => (
-            <div key={techno.technoname}>
+            <div key={techno.technoid}>
                 <h2>{techno.technoname}</h2>
                 <h3>Category</h3>
                 <p>{techno.technocategory}</p>
