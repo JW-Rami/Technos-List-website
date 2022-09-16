@@ -12,6 +12,11 @@ const { handleAddTechno } = props;
   function handleSubmit(e) {
     e.preventDefault();
     handleAddTechno(techno);
+    setTechno({                                        // Permet de reset le formulaire à zéro une fois submit
+      technoname: '',
+      technocategory: '',
+      technodescription: ''
+    })
   }
   function handleChange(e) {
     const {name, value} = e.target;                    // sert à récupérer le nom et la valeur des informations du formulaires
