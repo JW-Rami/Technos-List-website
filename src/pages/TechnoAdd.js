@@ -1,10 +1,15 @@
-export default function TechnoAdd() {
- 
+export default function TechnoAdd(props) {
+ const { handleAddTechno} = props;
+ const techno = { // on recupere pas les données de l'utilisateur on verifie dabord que ça fonctionne
+  name: 'React',
+  category:'front',
+  description: 'Learn React'
+ }
   return (
     <div className="techno-add">
       <h1>Add a techno</h1>
       <div>
-        <form action="">
+        <form onSubmit={(e) => handleAddTechno(e)}> {/* Pour que l'evenemnt soit passé dans la fonction */}
           <label htmlFor="techno-name">Name :</label>
           <br />
           <input type="text" name="techno-name" id="techno-name" />

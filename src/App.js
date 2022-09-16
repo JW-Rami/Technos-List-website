@@ -8,7 +8,7 @@ import TechnoAdd from "./pages/TechnoAdd";
 import TechnoList from "./pages/TechnoList";
 // Pas besoin d'import avec {} car on export par défaut
 
-function App() {
+function App() {                              // useState retourne 2 éléments: le morceau d'etat: "technos"
   const [technos, setTechnos] = useState([]); // useState c'est une fonction qui commence avec un état initial entre () ici le tableau
                                               // Chaque nouvelle techno ajoutée sera un nouvel objet dans le tableau
   function handleAddTechno(techno) {
@@ -29,6 +29,7 @@ function App() {
       {/* 
     <Home />
     <TechnoAdd/>
+    
     <TechnoList/> */}
 
 
