@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 export default function TechnoAdd(props) {
-  const { handleAddTechno } = props; // ajouter ici les autres éléments qu'on veut afficher pour l'evenement submit.
-  const techno = {
-    // on recupere pas les données de l'utilisateur on verifie dabord que ça fonctionne
-    name: "React",
-    category: "front",
-    description: "Learn React",
-  };
+  const [ techno, setTechno ] = useState({
+    technoname: 'lmkmlklk',
+    technocategory: '',
+    technodescription: ''
+  }); // ajouter ici les autres éléments qu'on veut afficher pour l'evenement submit.
+
+const { handleAddTechno } = props;
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -20,9 +20,9 @@ export default function TechnoAdd(props) {
         <form onSubmit={(e) => handleSubmit(e)}>
           {" "}
           {/* Pour que l'evenemnt soit passé dans la fonction */}
-          <label htmlFor="techno-name">Name :</label>
+          <label htmlFor="technoname">Name :</label>
           <br />
-          <input type="text" name="techno-name" id="techno-name" />
+          <input type="text" name="technoname" id="technoname" value={techno.technoname} />
           <br />
           <label htmlFor="techno-category">Category :</label>{" "}
           {/*"techno-category pour qu'il soit relié à la catégorie de techno*/}
