@@ -1,4 +1,5 @@
 export default function TechnoAdd() {
+ 
   return (
     <div className="techno-add">
       <h1>Add a techno</h1>

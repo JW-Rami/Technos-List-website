@@ -31,7 +31,9 @@ function App() {
     <TechnoAdd/>
     <TechnoList/> */}
 
-    
+
+
+
     </>
   );
 }
