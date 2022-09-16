@@ -4,12 +4,17 @@ export default function TechnoAdd(props) {
   name: 'React',
   category:'front',
   description: 'Learn React'
+ };
+ 
+ function handleSubmit(e) {
+  e.preventDefault();
+  handleAddTechno(techno);
  }
   return (
     <div className="techno-add">
       <h1>Add a techno</h1>
       <div>
-        <form onSubmit={(e) => handleAddTechno(e)}> {/* Pour que l'evenemnt soit passé dans la fonction */}
+        <form onSubmit={(e) => handleSubmit(e)}> {/* Pour que l'evenemnt soit passé dans la fonction */}
           <label htmlFor="techno-name">Name :</label>
           <br />
           <input type="text" name="techno-name" id="techno-name" />
