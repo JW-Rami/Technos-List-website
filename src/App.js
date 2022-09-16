@@ -13,7 +13,8 @@ function App() {                              // useState retourne 2 éléments:
                                               // Chaque nouvelle techno ajoutée sera un nouvel objet dans le tableau
   function handleAddTechno(techno) {
     console.log('handleAddTechno',techno);
-  }
+    setTechnos([...technos, techno])          // on clone le contenu initial du tableau et on ajoute notre objet techno
+  }                                           // à chaque envoie de formulaire on ajoute en objet les valeurs du formulaire au tableau de l'état d'App.js
   
   return (
     <>

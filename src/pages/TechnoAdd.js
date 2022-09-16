@@ -31,7 +31,7 @@ const { handleAddTechno } = props;
           <label htmlFor="techno-category">Category :</label>{" "}
           {/*"techno-category pour qu'il soit relié à la catégorie de techno*/}
           <br />
-          <select name="techno-category" id="techno-category" value={techno.technocategory} onChange={(e) => handleChange(e)}>
+          <select name="technocategory" id="technocategory" value={techno.technocategory} onChange={(e) => handleChange(e)}>
             <option value="">Select a category</option>
             <option value="front">Front</option>
             <option value="back">Back</option>
@@ -39,13 +39,14 @@ const { handleAddTechno } = props;
             <option value="other">Other</option>
           </select>
           <br />
-          <label htmlFor="techno-description">Description :</label>
+          <label htmlFor="technodescription">Description :</label>
           <br />
           <textarea
-            name="techno-description"
-            id="techno-description"
+            name="technodescription"
+            id="technodescription"
             cols="30"
             rows="10"
+            value={techno.technodescription} onChange={(e) => handleChange(e)}
           ></textarea>{" "}
           <br />
           <input type="submit" value="Add Techno" className="btn" />
