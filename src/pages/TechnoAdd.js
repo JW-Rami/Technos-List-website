@@ -37,7 +37,7 @@ export default function TechnoAdd(props) {
             cols="30"
             rows="10"
           ></textarea> <br />
-          <input type="submit" value="Add Techno" />
+          <input type="submit" value="Add Techno" className="btn" />
         </form>
       </div>
     </div>
