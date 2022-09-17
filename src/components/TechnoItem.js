@@ -9,6 +9,11 @@ export default function TechnoItem(props) {
         <p>{techno.technocategory}</p>
         <h3>Description</h3>
         <p>{techno.technodescription}</p>
+        <div className="footer">
+            <button className="btn-delete" onClick={() => handleDeleteTechno(techno.technoid)}>Delete</button>
+            {/* Pour supprimer la techno ajoutée on a juste besoin de l'id */}
+
+        </div>
     </div>
     )
 }
