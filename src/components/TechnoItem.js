@@ -1,4 +1,5 @@
 // Ce composant servira à créer un composant pour chaque formulaire envoyé
+import React from "react";
 export default function TechnoItem(props) {
     const { techno } = props;
     return (

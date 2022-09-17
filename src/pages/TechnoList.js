@@ -1,3 +1,4 @@
+import React from "react";
 import TechnoItem from "../components/TechnoItem";
 export default function TechnoList(props) {
   const { technos } = props; // Afin de faire passer technos en props et le remonter jusqu'au parent
@@ -8,8 +9,11 @@ export default function TechnoList(props) {
       <h1>All Technos</h1>
       <div>
         {technos.map((techno) => (
-          <TechnoItem techno={techno} key={techno.technoid}/> // On ajoute le composant TechnoItem qui aura pour props techno pour clé et techno en valeur = donc les valeurs de chaque formulaire
+          <TechnoItem  key={techno.technoid} techno={techno}/> // On ajoute le composant TechnoItem qui aura pour props techno pour clé et techno en valeur = donc les valeurs de chaque formulaire
+        
         ))}
+
+        
       </div>
     </div>
   );
