@@ -18,6 +18,13 @@ function App() {                              // useState retourne 2 éléments:
   }                                           // à chaque envoie de formulaire on ajoute en objet les valeurs du formulaire au tableau de l'état d'App.js
                                               // uuidv4 on l'appelle comme une fonction afin de lui attribuer une clé unique avec le formulaire
   
+function handleDeleteTechno(id) {
+  // Ici on n'utilise pas de base de données donc on se sert de l'état
+  setTechnos(technos.filter((tech) => tech.technoid !== id));
+  // on applique la méthode filter à toutes les technos qui sont différentes
+  // on aura donc un nouveau tableau avec les nouvelles valeurs
+}
+
   return (
     <>
       <Menu />
@@ -28,7 +35,7 @@ function App() {                              // useState retourne 2 éléments:
         {/* Non il n'y a pas doublon. Pour éviter que le / soit considérer comme "active" et le garder constamment en true il faut lui ajouter le second affichage */}
         <Route path="/add" element={<TechnoAdd handleAddTechno={handleAddTechno} />} /> {/* Faire passer la fonction handleAddTechno pour un attribut HTML. Puis lui associer clé: handleAddTechno et valeur: handleAddTechno
                                                                                            On la fait passer en props */}
-        <Route path="/list" element={<TechnoList technos={technos}/>} />
+        <Route path="/list" element={<TechnoList technos={technos} handleDeleteTechno={handleDeleteTechno}/>} />
         {/* Dans TechnoLit nous allons placer en props "technos" afin d'en faire un affichage dans All Technos il nous affichera donc toutes les valeurs fournit par useState */}
       </Routes>
       <div>

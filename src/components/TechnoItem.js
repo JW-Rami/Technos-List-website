@@ -1,7 +1,7 @@
 // Ce composant servira à créer un composant pour chaque formulaire envoyé
 import React from "react";
 export default function TechnoItem(props) {
-    const { techno } = props;
+    const { techno, handleDeleteTechno } = props;
     return (
         <div key={techno.technoid} className="card">
         <h2>{techno.technoname}</h2>
