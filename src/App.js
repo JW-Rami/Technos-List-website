@@ -13,7 +13,7 @@ function App() {                              // useState retourne 2 éléments:
   const [technos, setTechnos] = useState([]); // useState c'est une fonction qui commence avec un état initial entre () ici le tableau
                                               // Chaque nouvelle techno ajoutée sera un nouvel objet dans le tableau
   function handleAddTechno(techno) {
-    setTechnos([...technos, {techno,technoid: uuidv4()}])          
+    setTechnos([...technos, {...techno,technoid: uuidv4()}])          
                                               // on clone le contenu initial du tableau et on ajoute notre objet techno
   }                                           // à chaque envoie de formulaire on ajoute en objet les valeurs du formulaire au tableau de l'état d'App.js
                                               // uuidv4 on l'appelle comme une fonction afin de lui attribuer une clé unique avec le formulaire
