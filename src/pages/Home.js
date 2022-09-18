@@ -9,8 +9,8 @@
 export default function Home() {
   return (
     <div className="home">
-      <h1>My Progression</h1>
-      <div>Bienvenue sur ce site qui est consacré à ma progression</div>
+      <h1>Welcome to "Technos List website"</h1>
+      <div>Simple website built in react where you can fill a form and have a list of your stack or delete it from "All Technos".</div>
     </div>
   );
 }

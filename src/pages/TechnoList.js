@@ -10,6 +10,7 @@ export default function TechnoList(props) {
       <div>
         {technos.map((techno) => (
           <TechnoItem  key={techno.technoid} techno={techno} handleDeleteTechno={handleDeleteTechno}/> // On ajoute le composant TechnoItem qui aura pour props techno pour clé et techno en valeur = donc les valeurs de chaque formulaire
+          // Ici on passe handleDeleteTechno à son enfant TechnoItem
         
         ))}
 

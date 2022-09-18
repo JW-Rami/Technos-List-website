@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { v4 as uuidv4} from 'uuid';           // Permet d'attribuer un id pour chaque formulaire envoyé pour qu'ils aient une key unique
 import logo from "./logo.svg";
@@ -12,6 +12,13 @@ import TechnoList from "./pages/TechnoList";
 function App() {                              // useState retourne 2 éléments: le morceau d'etat: "technos"
   const [technos, setTechnos] = useState([]); // useState c'est une fonction qui commence avec un état initial entre () ici le tableau
                                               // Chaque nouvelle techno ajoutée sera un nouvel objet dans le tableau
+  useEffect(() => {
+    console.log('useEffect with []')
+  }, []);
+useEffect(() => {
+  console.log("useEffect with [technos]")
+}, [technos]);
+
   function handleAddTechno(techno) {
     setTechnos([...technos, {...techno,technoid: uuidv4()}])          
                                               // on clone le contenu initial du tableau et on ajoute notre objet techno
